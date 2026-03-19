@@ -1,0 +1,88 @@
+{
+  "metadata": {
+    "image_id": 1,
+    "file_name": "doc_0.png",
+    "image_width": 1025,
+    "image_height": 1025,
+    "total_elements": 3,
+    "processed_at": "2026-03-19T22:20:08.578169",
+    "ocr_engine": "EasyOCR",
+    "pipeline_version": "1.0.0"
+  },
+  "layout_elements": [
+    {
+      "element_id": 1,
+      "category": "Text",
+      "x": 50,
+      "y": 50,
+      "width": 900,
+      "height": 150,
+      "area_px": 135000,
+      "ocr_text": "NOTES TO THE FINANCIAL STATEMENTS Financc reccivables Ihat originated outside the U.S Wrc S52.7 billion and 547.5 billion al Decembcr 31_ 2004 and 2003_ raspectively; Othar Finance receivables consisted primarily of real astote_ cammercial &nd Dther collateralized Jbons accrued interest; Included in net Fnance and other reccivablcs &t Deccmber 31_ 2004 and 2003 wcrc $16.9 billion and $14.3 billion_ raspectively, af recaivables  hat hove bean sold Far legal purposes to consalidatod securilizatian SPEs and are ovailaBle only Concyoentcf AcltiesueJ AV #AGSD zntkes GnC toony ctlorteCctzotoniovotor Ondotoroctcioont: #Ley Ce and",
+      "ocr_confidence": 0.3726,
+      "reading_order": 1
+    },
+    {
+      "element_id": 2,
+      "category": "Section-header",
+      "x": 50,
+      "y": 220,
+      "width": 900,
+      "height": 80,
+      "area_px": 72000,
+      "ocr_text": "Fulure moturities_ exclusive of the effects af SFAS No. 133, Accounting for Darivativa Instrumants Hedging Activities, sf tatal receivob including minimum eose rentals 9s follows [in billions}: 2005 664.7; 2006 $24.3; 2007 s13.9; thereofter 510.1. Experience indicates that . substantial pertion of the porttolio generally is before the contractual maturity dates _ Finonce receivobles subiect ta Fair value Ot Decemnber 31 2004 and 2003 were $106.2 billion and $102.O billian and finonce 'repoid",
+      "ocr_confidence": 0.6588,
+      "reading_order": 2
+    },
+    {
+      "element_id": 3,
+      "category": "Text",
+      "x": 50,
+      "y": 320,
+      "width": 900,
+      "height": 600,
+      "area_px": 540000,
+      "ocr_text": "5103.8 billion, respechvely: Included in receivablas above are investments in direct Financing leases. The net investment at December 31 WDS Q5 fellew: {inmilliens_ 2004 2003 Totol minimum lease rentals to be received 532 Less: Uneamed income 581 Loan originaton costs Estimated residucl values 017 Less: Allawance For credit losses (82 0321 Net investment in direct financing leasas 549 8,480 The investment in direct fircieci3} lepses relates to the of vehicles_ various types of 'SransBolonion  ond other equipment and facilities_ Future mafurities minimum lease rentals _ as included above_ are as Follows (in 2005 52.1; 2006 S1.5; 2007 thereafter S0.4 NOTE 11 _ NET INVESTMENT IN OPERATING LEASES FINANCIAL SERVICES SECTOR The not investment in oporating laases al Decemnbar 31 wos ds Follows (in millions): 2004 2003 Vehicles and other equipment, at cost 41,545 44,098 Accumulated dcprecialion (9,477] 615} Allbwances far credit losses [305) [624) Net investment in eperating laases 31763 31,859 Included in net inveshent in operating leases Ot December 31_ 2004 were interests in operating eases and ihe related vehicles of about $2.5 Billion Ihat have been Iransfarred For legal purposes to consolidalad securitizalion SPEs and are available only For repeymont of debt issued bx those entities and tp poY Other socuritizotion investars and other participants; they dre not available to paY our other obligations or tne claims of our other creditors_ Minimum rental leases duc as follows: 2005 S4 billion; 2006 52.2 billion; 2007 S1,3 billion; oaoatingza8 millian; fzoogcluslzs 2009 million; therepher $407 million_ Assets subject to operating leases deprecialed primarily on the straight-line method over Ihe term of the lease to reduce Ihc assct to its estimalcd residual Valuo Eslimaled rcsiduaa volucs &rc based on ossumplions far uscd vchiclc prices % Icasc terminatian and the number af vehicles thot &re expected to be retured  Operating leoso depreciation expense (which includes and losses on disposol of ossets) was 56.4 billion in 2004, 58.5 billion in 2003_ ond 59.9 billion in 2002. retail leosing goins",
+      "ocr_confidence": 0.6971,
+      "reading_order": 3
+    }
+  ],
+  "document_structure": {
+    "title": "",
+    "page_header": "",
+    "page_footer": "",
+    "sections": [
+      {
+        "heading": "Fulure moturities_ exclusive of the effects af SFAS No. 133, Accounting for Darivativa Instrumants Hedging Activities, sf tatal receivob including minimum eose rentals 9s follows [in billions}: 2005 664.7; 2006 $24.3; 2007 s13.9; thereofter 510.1. Experience indicates that . substantial pertion of the porttolio generally is before the contractual maturity dates _ Finonce receivobles subiect ta Fair value Ot Decemnber 31 2004 and 2003 were $106.2 billion and $102.O billian and finonce 'repoid",
+        "content": [
+          {
+            "type": "text",
+            "text": "5103.8 billion, respechvely: Included in receivablas above are investments in direct Financing leases. The net investment at December 31 WDS Q5 fellew: {inmilliens_ 2004 2003 Totol minimum lease rentals to be received 532 Less: Uneamed income 581 Loan originaton costs Estimated residucl values 017 Less: Allawance For credit losses (82 0321 Net investment in direct financing leasas 549 8,480 The investment in direct fircieci3} lepses relates to the of vehicles_ various types of 'SransBolonion  ond other equipment and facilities_ Future mafurities minimum lease rentals _ as included above_ are as Follows (in 2005 52.1; 2006 S1.5; 2007 thereafter S0.4 NOTE 11 _ NET INVESTMENT IN OPERATING LEASES FINANCIAL SERVICES SECTOR The not investment in oporating laases al Decemnbar 31 wos ds Follows (in millions): 2004 2003 Vehicles and other equipment, at cost 41,545 44,098 Accumulated dcprecialion (9,477] 615} Allbwances far credit losses [305) [624) Net investment in eperating laases 31763 31,859 Included in net inveshent in operating leases Ot December 31_ 2004 were interests in operating eases and ihe related vehicles of about $2.5 Billion Ihat have been Iransfarred For legal purposes to consolidalad securitizalion SPEs and are available only For repeymont of debt issued bx those entities and tp poY Other socuritizotion investars and other participants; they dre not available to paY our other obligations or tne claims of our other creditors_ Minimum rental leases duc as follows: 2005 S4 billion; 2006 52.2 billion; 2007 S1,3 billion; oaoatingza8 millian; fzoogcluslzs 2009 million; therepher $407 million_ Assets subject to operating leases deprecialed primarily on the straight-line method over Ihe term of the lease to reduce Ihc assct to its estimalcd residual Valuo Eslimaled rcsiduaa volucs &rc based on ossumplions far uscd vchiclc prices % Icasc terminatian and the number af vehicles thot &re expected to be retured  Operating leoso depreciation expense (which includes and losses on disposol of ossets) was 56.4 billion in 2004, 58.5 billion in 2003_ ond 59.9 billion in 2002. retail leosing goins"
+          }
+        ],
+        "confidence": 0.6588
+      }
+    ],
+    "tables": [],
+    "figures": [],
+    "footnotes": [],
+    "formulas": [],
+    "full_text": [
+      {
+        "type": "text",
+        "text": "NOTES TO THE FINANCIAL STATEMENTS Financc reccivables Ihat originated outside the U.S Wrc S52.7 billion and 547.5 billion al Decembcr 31_ 2004 and 2003_ raspectively; Othar Finance receivables consisted primarily of real astote_ cammercial &nd Dther collateralized Jbons accrued interest; Included in net Fnance and other reccivablcs &t Deccmber 31_ 2004 and 2003 wcrc $16.9 billion and $14.3 billion_ raspectively, af recaivables  hat hove bean sold Far legal purposes to consalidatod securilizatian SPEs and are ovailaBle only Concyoentcf AcltiesueJ AV #AGSD zntkes GnC toony ctlorteCctzotoniovotor Ondotoroctcioont: #Ley Ce and",
+        "confidence": 0.3726
+      },
+      {
+        "type": "section_header",
+        "text": "Fulure moturities_ exclusive of the effects af SFAS No. 133, Accounting for Darivativa Instrumants Hedging Activities, sf tatal receivob including minimum eose rentals 9s follows [in billions}: 2005 664.7; 2006 $24.3; 2007 s13.9; thereofter 510.1. Experience indicates that . substantial pertion of the porttolio generally is before the contractual maturity dates _ Finonce receivobles subiect ta Fair value Ot Decemnber 31 2004 and 2003 were $106.2 billion and $102.O billian and finonce 'repoid",
+        "confidence": 0.6588
+      },
+      {
+        "type": "text",
+        "text": "5103.8 billion, respechvely: Included in receivablas above are investments in direct Financing leases. The net investment at December 31 WDS Q5 fellew: {inmilliens_ 2004 2003 Totol minimum lease rentals to be received 532 Less: Uneamed income 581 Loan originaton costs Estimated residucl values 017 Less: Allawance For credit losses (82 0321 Net investment in direct financing leasas 549 8,480 The investment in direct fircieci3} lepses relates to the of vehicles_ various types of 'SransBolonion  ond other equipment and facilities_ Future mafurities minimum lease rentals _ as included above_ are as Follows (in 2005 52.1; 2006 S1.5; 2007 thereafter S0.4 NOTE 11 _ NET INVESTMENT IN OPERATING LEASES FINANCIAL SERVICES SECTOR The not investment in oporating laases al Decemnbar 31 wos ds Follows (in millions): 2004 2003 Vehicles and other equipment, at cost 41,545 44,098 Accumulated dcprecialion (9,477] 615} Allbwances far credit losses [305) [624) Net investment in eperating laases 31763 31,859 Included in net inveshent in operating leases Ot December 31_ 2004 were interests in operating eases and ihe related vehicles of about $2.5 Billion Ihat have been Iransfarred For legal purposes to consolidalad securitizalion SPEs and are available only For repeymont of debt issued bx those entities and tp poY Other socuritizotion investars and other participants; they dre not available to paY our other obligations or tne claims of our other creditors_ Minimum rental leases duc as follows: 2005 S4 billion; 2006 52.2 billion; 2007 S1,3 billion; oaoatingza8 millian; fzoogcluslzs 2009 million; therepher $407 million_ Assets subject to operating leases deprecialed primarily on the straight-line method over Ihe term of the lease to reduce Ihc assct to its estimalcd residual Valuo Eslimaled rcsiduaa volucs &rc based on ossumplions far uscd vchiclc prices % Icasc terminatian and the number af vehicles thot &re expected to be retured  Operating leoso depreciation expense (which includes and losses on disposol of ossets) was 56.4 billion in 2004, 58.5 billion in 2003_ ond 59.9 billion in 2002. retail leosing goins",
+        "confidence": 0.6971
+      }
+    ]
+  }
+}
