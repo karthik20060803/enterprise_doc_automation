@@ -2,96 +2,6 @@
   "batch_size": 4,
   "documents": [
     {
-      "image_id": 1,
-      "file_name": "doc_0.png",
-      "width": 1025,
-      "height": 1025,
-      "elements": [
-        {
-          "category": "Text",
-          "bbox": [
-            50,
-            50,
-            900,
-            150
-          ],
-          "ocr_text": "NOTES TO THE FINANCIAL STATEMENTS Financc reccivables Ihat originated outside the U.S Wrc S52.7 billion and 547.5 billion al Decembcr 31_ 2004 and 2003_ raspectively; Othar Finance receivables consisted primarily of real astote_ cammercial &nd Dther collateralized Jbons accrued interest; Included in net Fnance and other reccivablcs &t Deccmber 31_ 2004 and 2003 wcrc $16.9 billion and $14.3 billion_ raspectively, af recaivables  hat hove bean sold Far legal purposes to consalidatod securilizatian SPEs and are ovailaBle only Concyoentcf AcltiesueJ AV #AGSD zntkes GnC toony ctlorteCctzotoniovotor Ondotoroctcioont: #Ley Ce and",
-          "confidence": 0.3726
-        },
-        {
-          "category": "Section-header",
-          "bbox": [
-            50,
-            220,
-            900,
-            80
-          ],
-          "ocr_text": "Fulure moturities_ exclusive of the effects af SFAS No. 133, Accounting for Darivativa Instrumants Hedging Activities, sf tatal receivob including minimum eose rentals 9s follows [in billions}: 2005 664.7; 2006 $24.3; 2007 s13.9; thereofter 510.1. Experience indicates that . substantial pertion of the porttolio generally is before the contractual maturity dates _ Finonce receivobles subiect ta Fair value Ot Decemnber 31 2004 and 2003 were $106.2 billion and $102.O billian and finonce 'repoid",
-          "confidence": 0.6588
-        },
-        {
-          "category": "Text",
-          "bbox": [
-            50,
-            320,
-            900,
-            600
-          ],
-          "ocr_text": "5103.8 billion, respechvely: Included in receivablas above are investments in direct Financing leases. The net investment at December 31 WDS Q5 fellew: {inmilliens_ 2004 2003 Totol minimum lease rentals to be received 532 Less: Uneamed income 581 Loan originaton costs Estimated residucl values 017 Less: Allawance For credit losses (82 0321 Net investment in direct financing leasas 549 8,480 The investment in direct fircieci3} lepses relates to the of vehicles_ various types of 'SransBolonion  ond other equipment and facilities_ Future mafurities minimum lease rentals _ as included above_ are as Follows (in 2005 52.1; 2006 S1.5; 2007 thereafter S0.4 NOTE 11 _ NET INVESTMENT IN OPERATING LEASES FINANCIAL SERVICES SECTOR The not investment in oporating laases al Decemnbar 31 wos ds Follows (in millions): 2004 2003 Vehicles and other equipment, at cost 41,545 44,098 Accumulated dcprecialion (9,477] 615} Allbwances far credit losses [305) [624) Net investment in eperating laases 31763 31,859 Included in net inveshent in operating leases Ot December 31_ 2004 were interests in operating eases and ihe related vehicles of about $2.5 Billion Ihat have been Iransfarred For legal purposes to consolidalad securitizalion SPEs and are available only For repeymont of debt issued bx those entities and tp poY Other socuritizotion investars and other participants; they dre not available to paY our other obligations or tne claims of our other creditors_ Minimum rental leases duc as follows: 2005 S4 billion; 2006 52.2 billion; 2007 S1,3 billion; oaoatingza8 millian; fzoogcluslzs 2009 million; therepher $407 million_ Assets subject to operating leases deprecialed primarily on the straight-line method over Ihe term of the lease to reduce Ihc assct to its estimalcd residual Valuo Eslimaled rcsiduaa volucs &rc based on ossumplions far uscd vchiclc prices % Icasc terminatian and the number af vehicles thot &re expected to be retured  Operating leoso depreciation expense (which includes and losses on disposol of ossets) was 56.4 billion in 2004, 58.5 billion in 2003_ ond 59.9 billion in 2002. retail leosing goins",
-          "confidence": 0.6971
-        }
-      ]
-    },
-    {
-      "image_id": 3,
-      "file_name": "doc_2.png",
-      "width": 1025,
-      "height": 1025,
-      "elements": [
-        {
-          "category": "Table",
-          "bbox": [
-            80,
-            150,
-            900,
-            700
-          ],
-          "ocr_text": "galus 4Ier LXrc; nlnorfly Inlcresl of S2G milIon, S41 Die mnlnimwnl nntobiy rcqulrcd by 1he Einploycc Rctiremcn million :u1d SI-i million were reclassiliet Lo @arlngs lo1 Ule Incume Securily' Ac (ERISA) _ Inlernalional Paper made no yedrs endedd December 31, 2004, 2003 and 2002, conlrbuton iu 2003 0r 2004, a1d ddes nOL expect [0 make respectively: Of the nel giins reclssified t earnings 2004, contribuions in 2005 or 2006 (0 thte qualified delined S6 milliou rclatcd (0 hedges that are n0 longer prohablc. As henefll plan_ The nonqu Ulfied plan i: only Iunder to the oE December 51, 2004, gains af $40 mnillicu laxes :uId EXLCIIL benelits whlch are expecled 10 be $2 Inillion minorily interesl :ue erpecled to be reclassilied eanings in 2005_ 2005. Other contracts are Used (Q ofiset the ear7ings impact relating t0 Uhc varlahillty in exchange rales 0u certaln short- Nc Terodlc Pensiou Exlense (Iucowel terni mnonulry #s21s wid li:illies denomlnaed in nOIJ - [unclional currencies %d are nOl designater #s hedges Service COSl is lle ACLuari: presen[ raue o benelits Changes in the lair value of tlese instrumnerls; recognized allributed b;' the plans' benelit formula [0 services reridered currenlly iI) Qacnings (0 olset Ihe reme Strernent of the hy employees during lhe year; Interest cost represents (he rehicl :SSCL; 4d Jixblllfcs; LcC1@ signlficat Incrcase In Ulc projeclcd hcncflt ohlg uon whicli Js discouIled JOun; due LO lhe pissage of Lme The expecled International Paper does not hold or issue linancial relllIti on plan #ssets rellects the computed amount of instruments lor Durposes. The countemarlies swap currenl Fear exrnings iron (he inveStITCIt 0[ plan assels \"gr Lenicnls and forcigt exchauige coniracl consi:t 0f using lnalct -tcrin rJ10 ol rclurt; numher ol inajor internudonal Iizicial insllulions Iilernational Paper continually monilors ils posiliOs with Ner periotlic pension @qense (income) for qualilied and and the credit qualily ol these linancial inslitulions ad does nonqualified L.S. delinedl benelit plans connprised the following: cxpcct nonpcHornamce hy thc countcryyulics Iatfioily 2004 20102 NOTE 14 CAPITAL STOCK Servicc 115 IQ7 Interct cost 467 169 5G6 The Aullorized capilal slock bout Decciber 31. 2004 und Expocked rtluri} On pw) dL; (592) (598) (663) 2003 consisled of 990,850,0(O) shares 0l coninon Slock; S1 Acluarl: loss par value; 400,000 shares o cumularive $4 prelerred stock; Amortlzalion af prior scrvice without ptr ualite (slaled value S1Q0 per share); and 8,750,000 shares ol scrial prclcrrcd slock, $1 par Tlc Nct periodic pUIion Lntnyc seljal preferred slock is issuable in One more serles by Die (income) JW {(752 Board 0f Directors withou (urther sharelolder aclion: Ecludes $34 million, S8.3 million and $2.6 mlllion in 2004 , 2003 and 2002_ rL Auctively; curtillment LrssCs_ 51.A NOTE 15 RETIKEMENT FLANS mllion, 56.3 milllon and 52.4 nllon Zun4_ 200)3 and 20}02 , respecdively; of spechal termlnauion benelils, In connectlon with U.S. Defined Benefit Platus cast redluction program and facllity [llionalizations that trre rucdrucol Resircluring i [ pter cluuggs in the conseslilaterL Dllernauonal Faper malnrals pensiol plans Llal provde ACUitUL o[ operatithL;_ Axo excludles s0 3 txiLlion 4nd Ss.8 relireinenl henelils l0 subs[ially a domestic employees mlllol ol curtulmienl lossts In 2(0)S ad 20(2 , resptctvely; and hired prior t0 July 2004. These eriployees generally are 41Q.6 million al setllenient 2002 , rcluted eliglhle parlicipae iti Ule pliuts; Upon compleliou One (inttilurus O Masonite_ Mexihle Pickciging, Decoratjix Frodics Y-V\" of scrvice ALLIMTCMIC of wge 24_ Employecs hlred cher ~(Luler bsintscs Lu #FLIL rccorued in Nct [xse; #ter June 50, 2004, wha ure nOt eligible Ior Lhis pension pln (g.ns) on sles and Inipaurments of buxlexses held for Sue iu Iuill receive Ar Tditio14 conuatir canirhnioiInIheir consclidaled fnnlemenr nfnderuions Jller Puil irxdiug ' lcog\" 206 Aluc gnins in MId",
-          "confidence": 0.3955
-        },
-        {
-          "category": "Caption",
-          "bbox": [
-            80,
-            880,
-            900,
-            100
-          ],
-          "ocr_text": "Tle Julcrcase In 2004 @S_ pcnsIon CxpcnSc, %nd [lic changc The pls provide delinetl henelits bused OIL years & aediled in 2(0S [0 net pension expenSE (rum income in 2(()Z were service and either final #rerige earnirgs (sularied principally due lo reduclion iI 2003 in the expecled long",
-          "confidence": 0.4513
-        }
-      ]
-    },
-    {
-      "image_id": 4,
-      "file_name": "doc_3.png",
-      "width": 1025,
-      "height": 1025,
-      "elements": [
-        {
-          "category": "Text",
-          "bbox": [
-            60,
-            80,
-            950,
-            900
-          ],
-          "ocr_text": "of New York and David Kalokitis ol ivity in every area of the company Samoff Corporation; were named to the list oi 50 Intformation The industries that wll drive the growth Tachnology Players Enargy' Dt Dur aea financial sanvices_ RaderEnergy; Houston-based business senvices; communicalions consultancy: Stergiou and Kalokitis health care and technology are all were honored for leading the consuming more energy: And the development Of systen that used telacommunications infrastructure that Global Pasitioning Satellite (GPS} supports tne groting technolagical technology to brlng new power sophistication of other industries is substation on line in just four hours itself evolving into highly energy instead of the nomal 72 hours; intensive one_ As newv supplies of The breakthrough will allow pOwer electricity become available_ and a5 systems tO recover more qulckly after the demand ir energy in Our region unioreszen events: continues t0 rise_ Con Edison wvill continue t0 reinforce its transmission On It for the Future and dolivary infrastructuro Sp that it can accommodate Ihe addition of nelv Over the next 10 years residential power sources and newv powver users and business customers within Con all while maintaining Our industry - Edison's service area will require the lgading reliability Doing So will require delivery Of significantly more eneIgy the steady commitment Of resdurces than they do today We are meeting time_ and attentlon: But these elfonts this challenge through increased will be necessary t0 continue our investment in our transmission and tradition of excellent senice; distribution notworks and dovelopment of new technolgies and processes 7405 Lelt: Kilui Bedun; crAmgirjoring ! Juicbicopeit CAlst: Tv Ceirv ? CGTniltn; ~ cannril (ebiucy Uusmuatunc nyuV' CA Eteot enclviestlo ees e J8 KSUn:Etse. Aighl Exch YEJ tnys suti cinlebjice; munliin &r e0fic > *e-indulmi Lp(radir -UitMETI ul 9uoolins Pjgc LyLNsman Clike-[echzric f Mcgusme 038 %ysEII, Irie tzt J&OCCO (EEI 0l g1 nit Jje Ven3 'efbzeU Cenlecher DLeniedheb*EdulIy COWILCluDur je40d ConEonecrelciic TTEC_ Tlcl {Icci Rigne \"Isretu: DLU-LEEIECUASCLenanidjum  C JCSML uS4 MJDS -cUL In 4l IncizmLakenuJourLLoi san Bck Covec LLIE_ST22 LHtAr1E In] Er-TI#7tu8ai41Cn8aTl# CiziCeIC Cu: Ccinein CeIn HCAer GdraT ECtir LI#aneacr &L BCmk;2 Canlcr Nkcili#: Ccn Bt#{ ouck Ramu Jlea #B( II2Uu02; 0c endsgeeile: (l Rhizigy XTACZUNG 8764 40ACEJA BenNeceAc Fpr Waa RdWdaechan p4 Gund IieCE SceN Key Vs",
-          "confidence": 0.482
-        }
-      ]
-    },
-    {
       "image_id": 2,
       "file_name": "doc_1.png",
       "width": 1025,
@@ -128,7 +38,97 @@
             650
           ],
           "ocr_text": "While the success of the Grand Theft altention to detail and ability to recognize Auto franchise is extremely rewarding; vvhat makes games compelling: creating blockbuster of this magnitude Rockstar's unique market position is com also affords Take an invaluable base plemented by Gathering's focus on pub- of knowledge and expertise During fiscal lishing premium and mid-priced products 2003 _ Take took significant steps to on PC console and handheld platforms_ share and leverage internaz resources and We firmly believe demand for our premi- experiences to create mare integrated Um priced games such as Grand Theft and seamless publishing operation Our Auto; Max Payne_ Midnight Club, Rockstar Games, Gathering and Global Manhunt; and Mafia will continue to Star Software publishing labels have been as the installed base of video game plat- streamlined to tap Rorkstar's knowledge_ forms increases creating more con sumers for our products Global Star GS Additionally; with gradua reductions in hardware pricing and the resulting Global Star Software publishes value-priced increased penetration of video game plat entertainment software across all  platforms_ forms  there is much greater opportuni- Core Global Star franchises include the hit ty to attract more diverse and_ at times Outlaw sports series (under license from price conscious gamer Jack of All MTV); the Tycoon franchise, including School Games success in distributing budget- Tycoon, Airport Tycoon and Mall Tycoon 2; priced titles has proven that the value Motocross Mania; and Army Men. In addition segment of the software market is desir- original content Global Star manages the able long-term business Accordingly: DUC jewel case and value compilation business for Global Star label publishing games that all Take-Two PC products combine value pricing with compe game play and is distributing these titles exclusively through Jack of All Games Two Two grow Iling",
-          "confidence": 0.8595
+          "confidence": 0.8645
+        }
+      ]
+    },
+    {
+      "image_id": 1,
+      "file_name": "doc_0.png",
+      "width": 1025,
+      "height": 1025,
+      "elements": [
+        {
+          "category": "Text",
+          "bbox": [
+            50,
+            50,
+            900,
+            150
+          ],
+          "ocr_text": "NOTES TO THE FINANCIAL STATEMENTS Financc reccivables Ihat originated outside the U.S Wrc S52.7 billion and 547.5 billion al Dccembcr 31_ 2004 and 2003_ raspectively; Othar Finance receivables consisted primarily of real astote_ cammercial &nd Dther collateralized Jbons accrued interest; Included in net Fnance and other reccivablcs &t Deccmber 31_ 2004 and 2003 wcrc $16.9 billion and $14.3 billion_ raspectively, af recaivables  hat hove bean sold Far legal purposes to consalidatod securilizatian SPEs and are ovailaBle only Concyoentcf AcltiesueJ AV #AGSD zntkes Gn toony ctlorteCctzotoniovotor Ondotoroctcioont: #Ley Ce and",
+          "confidence": 0.3847
+        },
+        {
+          "category": "Section-header",
+          "bbox": [
+            50,
+            220,
+            900,
+            80
+          ],
+          "ocr_text": "Fulure moturities_ exclusive of the effects af SFAS No. 133, Accounting for Darivativa Instrumants Hedging Activities, sf tatal receivob including minimum eose rentals 9s follows [in billions}: 2005 664.7; 2006 $24.3; 2007 s13.9; thereofter 510.1. Experience indicates that . substantial pertion of the porttolio generally is before the contractual maturity dates _ Finonce receivobles subiect ta Fair value Ot Decemnber 31 2004 and 2003 were $106.2 billion and $102.O billian and finonce 'repoid",
+          "confidence": 0.6591
+        },
+        {
+          "category": "Text",
+          "bbox": [
+            50,
+            320,
+            900,
+            600
+          ],
+          "ocr_text": "5103.8 billion, respechvely: Included in receivablas above are investments in direct Financing leases. The net investment at December 31 WDS Q5 fellew: {inmilliens_ 2004 2003 Totol minimum lease rentals to be received 532 Less: Uneamed income 581 Loan originaton costs Estimated residucl values 017 Less: Allawance For credit losses (82 0321 Net investment in direct financing leasas 549 8,480 The investment in direct fircieci3} lepses relates to the of vehicles_ various types of 'SransBolonion  ond other equipment and facilities_ Future mafurities minimum lease rentals _ as included above_ are as Follows (in 2005 52.1; 2006 S1.5; 2007 thereafter S0.4 NOTE 11 _ NET INVESTMENT IN OPERATING LEASES FINANCIAL SERVICES SECTOR The not investment in oporating laases al Decembar 31 wos ds Follows (in millions): 2004 2003 Vehicles and other equipment, at cost 41,545 44,098 Accumulated dcprecialion (9,477] 615} Allbwances far credit losses [305) [624) Net investment in eperating laases 31763 31,859 Included in net inveshent in operating leases Ot December 31_ 2004 were interests in operating eases and ihe related vehicles of about $2.5 Billion Ihat have been Iransfarred For legal purposes to consolidalad securitizalion SPEs and are available only For repeymont of debt issued bx those entities and tp poY Other socuritizotion investars and other participants; they dre not available to paY our other obligations or tne claims of our other creditors_ Minimum rental leases duc as follows: 2005 S4 billion; 2006 52.2 billion; 2007 S1,3 billion; oaoatingza8 millian; fzoogcluslzs 2009 million; therepher $407 million_ Assets subject to operating leases deprecialed primarily on the straight-line method over Ihe term of the lease to reduce Ihc assct to its estimalcd residual Valuo Eslimaled rcsiduaa volucs &rc based on ossumplions far uscd vchiclc prices % Icasc terminatian and the number af vehicles thot &re expected to be retured  Operating leoso depreciation expense (which includes and losses on disposol of ossets) was 56.4 billion in 2004, 58.5 billion in 2003_ ond 59.9 billion in 2002. retail leosing goins",
+          "confidence": 0.6974
+        }
+      ]
+    },
+    {
+      "image_id": 3,
+      "file_name": "doc_2.png",
+      "width": 1025,
+      "height": 1025,
+      "elements": [
+        {
+          "category": "Table",
+          "bbox": [
+            80,
+            150,
+            900,
+            700
+          ],
+          "ocr_text": "galus 4Ier LXrc; nlnorfly Inlcresl of S2G milIon, S41 Die mnlnimwnl nntobiy rcqulrcd by 1he Einploycc Rctiremcn million :u1d SI-i million were reclassiliet Lo @arlngs lo1 Ule Incume Securily' Ac (ERISA) _ Inlernalional Paper made no yedrs endedd December 31, 2004, 2003 and 2002, conlrbuton iu 2003 0r 2004, a1d ddes nOL expect [0 make respectively: Of the nel giins reclssified t earnings 2004, contribuions in 2005 or 2006 (0 thte qualified delined S6 milliou rclatcd (0 hedges that are n0 longer prohablc. As henefll plan_ The nonqu Ulfied plan i: only funderl to the oE December 51, 2004, gains af $40 mnillicu laxes :uId EXLCIIL benelits whlch are expecled 10 be $2 Inillion minorily interesl :ue erpecled to be reclassilied eanings in 2005_ 2005. Other contracts are Used (Q ofiset the ear7ings impact relating t0 Uhc varlahillty in exchange rales 0u certaln short- Nc Terodlc Pensiou Exlense (Iucowel terni mnonulry #s21s wid li:illies denomlnaed in nOIJ - [unclional currencies %d are nOl designater #s hedges Service COSl is lle ACLuari: presen[ raue o benelits Changes in the lair value of tlese instrumnerls; recognized allributed b;' the plans' benelit formula [0 services reridered currenlly iI) Qacnings (0 olset Ihe reme Strernent of the hy employees during lhe year; Interest cost represents (he rehicl :SSCL; 4d Jixblllfcs; LcC1@ signlficat Incrcase In Ulc projeclcd hcncflt ohlg uon whicli Js discouIled JOun; due LO lhe pissage of Lme The expecled International Paper does not hold or issue linancial relllIti on plan #ssets rellects the computed amount of instruments lor Durposes. The countemarlies swap currenl Fear exrnings iron (he inveStITCIt 0[ plan assels \"gr Lenicnls and forcigt exchauige coniracl consi:t 0f using lnalct -tcrin rJ10 ol rclurt; numher ol inajor internudonal Iizicial insllulions Iilernational Paper continually monilors ils posiliOs with Ner periotlic pension @qense (income) for qualilied and and the credit qualily ol these linancial inslitulions ad does nonqualified L.S. delinedl benelit plans connprised the following: cxpcct nonpcHornamce hy thc countcryyulics Iatfioily 2004 20102 NOTE 14 CAPITAL STOCK Servicc 115 IQ7 Interct cost 467 169 5G6 The Aullorized capilal slock bout Decciber 31. 2004 und Expocked rtluri} On pw) dL; (592) (598) (663) 2003 consisled of 990,850,0(O) shares 0l coninon Slock; S1 Acluarl: loss par value; 400,000 shares o cumulative $4 prelerred stock; Amortlzalion af prior scrvice without ptr ualite (slaled value S1Q0 per share); and 8,750,000 shares ol scrial prclcrrcd slock, $1 par Tlc Nct periodic pUIion Lntnyc seljal preferred slock is issuable in One more serles by Die (income) JW {(752 Board 0f Directors withou (urther sharelolder aclion: Ecludes $34 million, S8.3 million and $2.6 mlllion in 2004 , 2003 and 2002_ rL Auctively; curtillment LrssCs_ 51.A NOTE 15 RETIKEMENT FLANS mllion, 56.3 milllon and 52.4 nllon Zun4_ 200)3 and 20}02 , respecdively; of spechal termlnauion benelils, In connectlon with U.S. Defined Benefit Platus cast redluction program and facllity [llionalizations that trre rucdrucol Resircluring i [ pter cluuggs in the conseslilaterL Dllernauonal Faper malnrals pensiol plans Llal provde ACUitUL o[ operatithL;_ Axo excludles s0 3 txiLlion 4nd Ss.8 relireinenl henelils l0 subs[ially a domestic employees mlllol ol curtulmienl lossts In 2(0)S ad 20(2 , resptctvely; and hired prior t0 July 2004. These eriployees generally are 41Q.6 million al setllenient 2002 , rcluted eliglhle parlicipae iti Ule pliuts; Upon compleliou One (inttilurus O Masonite_ Mexihle Pickciging, Decoratjix Frodics Y-V\" of scrvice ALLIMTCMIC of wge 24_ Employecs hlred cher ~(Luler bsintscs Lu #FLIL rccorued in Nct [xse; #ter June 50, 2004, wha ure nOt eligible Ior Lhis pension pln (g.ns) on sles and Inipaurments of buxlexses held for Sue iu Iuill receive Ar Tditio14 conuatir canirhnioiInIheir consclidaled fnnlemenr nfnderuions Jller Puil irxdiug ' lcog\" 206 Aluc gnins in MId",
+          "confidence": 0.3947
+        },
+        {
+          "category": "Caption",
+          "bbox": [
+            80,
+            880,
+            900,
+            100
+          ],
+          "ocr_text": "Tle Julcrcase In 2004 @S_ pcnsIon CxpcnSc, %nd [lic changc The pls provide delinetl henelits bused OIL years & aediled in 2(0S [0 net pension expenSE (rum income in 2(()Z were service and either final #rerige earnirgs (sularied principally due lo reduclion iI 2003 in the expecled long",
+          "confidence": 0.451
+        }
+      ]
+    },
+    {
+      "image_id": 4,
+      "file_name": "doc_3.png",
+      "width": 1025,
+      "height": 1025,
+      "elements": [
+        {
+          "category": "Text",
+          "bbox": [
+            60,
+            80,
+            950,
+            900
+          ],
+          "ocr_text": "of New York and David Kalokitis ol ivity in every area of the company Samoff Corporation; were named to the list oi 50 Intformation The industries that wll drive the growth Tachnology Players Enargy' Dt Dur aea financial sanvices_ RaderEnergy; Houston-based business senvices; communicalions consultancy: Stergiou and Kalokitis health care and technology are all were honored for leading the consuming more energy: And the development Of systen that used telacommunications infrastructure that Global Pasitioning Satellite (GPS} supports tne groting technolagical technology to brlng new power sophistication of other industries is substation on line in just four hours itself evolving into highly energy instead of the nomal 72 hours; intensive one_ As newv supplies of The breakthrough will allow pOwer electricity become available_ and a5 systems tO recover more qulckly after the demand ir energy in Our region unioreszen events: continues t0 rise_ Con Edison wvill continue t0 reinforce its transmission On It for the Future and dolivary infrastructuro Sp that it can accommodate Ihe addition of nelv Over the next 10 years residential power sources and newv powver users and business customers within Con all while maintaining Our industry - Edison's service area will require the lgading reliability Doing So will require delivery Of significantly more eneIgy the steady commitment Of resdurces than they do today We are meeting time_ and attentlon: But these elfonts this challenge through increased will be necessary t0 continue our investment in our transmission and tradition of excellent senice; distribution notworks and dovelopment of new technolgies and processes 7405 Lelt: Kilui Bedun; crAmgirjoring ! Juicbicopeit CAlst: Tv Ceirv ? CGTniltn; ~ cannril (ebiucy Uusmuatunc nyuV' CA Eteot enclviestlo ees e J8 KSUn:Etse. Aighl Exch YEJ tnys suti cinlebjice; munliin &r e0fic > *e-indulmi Lp(radir -UitMETI ul 9uoolins Pjgc LyLNsman Clike-[echzric f Mcgusme 038 %ysEII, Irie tzt J&OCCO (EEI 0l g1 nit Jje Ven3 'efbzeU Cenlecher DLeniedheb*EdulIy COWILCluDur je40d ConEonecrelciic TTEC_ Tlcl {Icci Rigne \"Isretu: DLU-LEEIECUASCLenanidjum  C JCSML uSI4 MJDS -cUL In 4l IncizmLakenuJourLLoi san Bck Covec LLIE_ST22 LHtAr1E In] Er-TI#7tu8ai41Cn8aTl# CiziCeIC Cu: Ccinein CeIn HCAer GdraT ECtir LI#aneacr &L BCmk;2 Canlcr Nkcili#: Ccn Bt#{ ouck Ramu Jlea #B( II2Uu02; 0c endsgeeile: (l Rhizigy XTACZUNG 8764 40ACEJA BenNeceAc Fpr Waa RdWdaechan p4 Gund IieCE SceN Key Vs",
+          "confidence": 0.4818
         }
       ]
     }

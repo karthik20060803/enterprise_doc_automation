@@ -1,0 +1,11 @@
+numpy
+pandas
+matplotlib
+pillow
+opencv-python
+easyocr
+pycocotools
+requests
+tqdm
+streamlit
+flask

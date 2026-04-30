@@ -1,0 +1,279 @@
+:root {
+  --bg: #0f172a;
+  --bg-soft: #111827;
+  --card: #1f2937;
+  --card-2: #111827;
+  --text: #e5e7eb;
+  --muted: #94a3b8;
+  --primary: #3b82f6;
+  --primary-2: #2563eb;
+  --success: #16a34a;
+  --danger: #ef4444;
+  --border: #334155;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+  background: radial-gradient(circle at top right, #1e293b, var(--bg));
+  color: var(--text);
+}
+
+.page-shell {
+  width: min(1200px, 94vw);
+  margin: 24px auto 40px;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  margin: 0 0 8px;
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+.hero p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.app-meta {
+  margin-top: 8px !important;
+  font-size: 0.9rem;
+}
+
+#api-health {
+  font-weight: 700;
+  color: #fbbf24;
+}
+
+.status-badge {
+  background: rgba(59, 130, 246, 0.12);
+  border: 1px solid rgba(59, 130, 246, 0.35);
+  border-radius: 12px;
+  padding: 12px 14px;
+  min-width: 140px;
+}
+
+.status-badge span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.status-badge strong {
+  font-size: 1.15rem;
+}
+
+.layout-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.card {
+  background: linear-gradient(180deg, var(--card), var(--card-2));
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.card h2 {
+  margin: 4px 0 14px;
+  font-size: 1.2rem;
+}
+
+.card h3 {
+  margin-top: 20px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field span {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.field input,
+.field select {
+  background: #0b1220;
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.field.checkbox {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  padding-top: 10px;
+}
+
+.field.checkbox span {
+  color: var(--text);
+}
+
+.btn {
+  border: none;
+  border-radius: 8px;
+  padding: 11px 16px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn.primary {
+  background: linear-gradient(180deg, var(--primary), var(--primary-2));
+  color: white;
+}
+
+.btn.secondary {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.inline-message {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: var(--muted);
+  min-height: 20px;
+}
+
+.metric-controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 10px;
+  align-items: end;
+  margin-bottom: 14px;
+}
+
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(120px, 1fr));
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.metric-item {
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.metric-item .label {
+  display: block;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.metric-item .value {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.images-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 10px;
+}
+
+figure {
+  margin: 0;
+}
+
+figcaption {
+  margin-bottom: 8px;
+  color: var(--muted);
+}
+
+img {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #0b1220;
+  min-height: 220px;
+  object-fit: contain;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px 0;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border-bottom: 1px solid var(--border);
+  padding: 8px;
+  text-align: left;
+  font-size: 0.9rem;
+  vertical-align: top;
+}
+
+th {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+pre {
+  max-height: 340px;
+  overflow: auto;
+  background: #0b1220;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 0.82rem;
+  white-space: pre-wrap;
+}
+
+@media (max-width: 980px) {
+  .layout-grid,
+  .images-grid,
+  .form-grid,
+  .metric-controls {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

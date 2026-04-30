@@ -1,0 +1,9 @@
+flask
+gunicorn
+numpy
+pandas
+pillow
+opencv-python-headless
+easyocr
+requests
+tqdm

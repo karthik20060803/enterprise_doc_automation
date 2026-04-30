@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: enterprise-doc-automation
+    env: python
+    plan: free
+    buildCommand: pip install --upgrade pip && pip install -r requirements-render.txt
+    startCommand: gunicorn web_frontend:app --bind 0.0.0.0:$PORT --workers 1 --threads 2 --timeout 180
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.11
+      - key: IDP_FRONTEND_DEBUG
+        value: "false"
