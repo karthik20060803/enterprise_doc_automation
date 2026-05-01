@@ -924,6 +924,8 @@ def api_process():
 
 
 if __name__ == "__main__":
-    port = int(os.environ.get("IDP_FRONTEND_PORT", "5055"))
+    # Use PORT from environment if available (Render passes this)
+    port = int(os.environ.get("PORT", os.environ.get("IDP_FRONTEND_PORT", "5055")))
     debug_mode = _parse_bool(os.environ.get("IDP_FRONTEND_DEBUG", "false"), default=False)
-    app.run(host="127.0.0.1", port=port, debug=debug_mode)
+    # Bind to 0.0.0.0 so Render can detect the port properly
+    app.run(host="0.0.0.0", port=port, debug=debug_mode)
