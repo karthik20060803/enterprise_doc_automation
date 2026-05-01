@@ -3,7 +3,7 @@ services:
     name: enterprise-doc-automation
     env: python
     plan: free
-    buildCommand: pip install --upgrade pip && pip install -r requirements-render.txt
+    buildCommand: pip install --upgrade pip && pip install gunicorn && pip install -r requirements-render.txt
     startCommand: gunicorn web_frontend:app
     healthCheckPath: /api/health
     envVars:
