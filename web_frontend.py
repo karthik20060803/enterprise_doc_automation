@@ -1,9 +1,11 @@
+
 import base64
 import datetime as dt
 import io
 import os
 import pickle
 import re
+import sqlite3
 from functools import lru_cache
 from pathlib import Path
 from typing import Any, Dict, List, Sequence, Set, Tuple
@@ -13,20 +15,103 @@ import easyocr
 import numpy as np
 import pandas as pd
 import torch
-from flask import Flask, jsonify, render_template, request
+from flask import Flask, jsonify, render_template, request, redirect, url_for, session, g
 from werkzeug.exceptions import RequestEntityTooLarge
+from werkzeug.security import generate_password_hash, check_password_hash
 from PIL import Image
 
 from evaluate_accuracy import ALL_TEXT_CATEGORIES, CORE_TEXT_CATEGORIES, aggregate
 
+
+
 app = Flask(__name__, template_folder="templates", static_folder="static")
 app.config["MAX_CONTENT_LENGTH"] = 60 * 1024 * 1024  # 60 MB upload cap
 app.config["SEND_FILE_MAX_AGE_DEFAULT"] = 0
+app.secret_key = os.environ.get("APP_SECRET_KEY", "supersecretkey123")
 APP_VERSION = "3.0.0"
 MODEL_DIR = Path("models")
 MODEL_READER_PATH = MODEL_DIR / "easyocr_reader.pkl"
 MODEL_PIPELINE_CONFIG_PATH = MODEL_DIR / "pipeline_config.pkl"
 MODEL_PROCESSING_RESULTS_PATH = MODEL_DIR / "processing_results.pkl"
+
+# --- SQLITE USER DB ---
+DB_PATH = os.path.join(os.path.dirname(__file__), "users.db")
+def get_db():
+    db = getattr(g, "_database", None)
+    if db is None:
+        db = g._database = sqlite3.connect(DB_PATH)
+    return db
+
+def init_user_db():
+    db = get_db()
+    db.execute("""
+        CREATE TABLE IF NOT EXISTS users (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            username TEXT UNIQUE NOT NULL,
+            password_hash TEXT NOT NULL
+        )
+    """)
+    db.commit()
+
+@app.teardown_appcontext
+def close_connection(exception):
+    db = getattr(g, "_database", None)
+    if db is not None:
+        db.close()
+# --- LOGIN/SIGNUP/LOGOUT ROUTES ---
+def is_logged_in():
+    return session.get("user") is not None
+
+@app.route("/signup", methods=["GET", "POST"])
+def signup():
+    init_user_db()
+    if request.method == "POST":
+        username = request.form.get("username", "").strip()
+        password = request.form.get("password", "").strip()
+        if not username or not password:
+            return render_template("signup.html", error="Username and password required.")
+        db = get_db()
+        try:
+            db.execute(
+                "INSERT INTO users (username, password_hash) VALUES (?, ?)",
+                (username, generate_password_hash(password)),
+            )
+            db.commit()
+            return render_template("signup.html", success="Account created! Please log in.")
+        except sqlite3.IntegrityError:
+            return render_template("signup.html", error="Username already exists.")
+    return render_template("signup.html")
+
+@app.route("/login", methods=["GET", "POST"])
+def login():
+    init_user_db()
+    if request.method == "POST":
+        username = request.form.get("username", "").strip()
+        password = request.form.get("password", "").strip()
+        db = get_db()
+        user = db.execute("SELECT * FROM users WHERE username = ?", (username,)).fetchone()
+        if user and check_password_hash(user[2], password):
+            session["user"] = username
+            return redirect(url_for("index"))
+        return render_template("login.html", error="Invalid username or password.")
+    if is_logged_in():
+        return redirect(url_for("index"))
+    return render_template("login.html")
+
+@app.route("/logout")
+def logout():
+    session.pop("user", None)
+    return redirect(url_for("login"))
+
+# --- PROTECT MAIN ROUTES ---
+from functools import wraps
+def login_required(f):
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        if not is_logged_in():
+            return redirect(url_for("login"))
+        return f(*args, **kwargs)
+    return decorated_function
 
 SUBJECT_KEYWORDS = {
     "ENGLISH",
@@ -162,19 +247,37 @@ def _resize_if_needed(image_rgb: np.ndarray, max_side: int = 2200) -> np.ndarray
     return resized
 
 
-def _preprocess_for_ocr(image_rgb: np.ndarray) -> np.ndarray:
+def _preprocess_for_ocr(image_rgb: np.ndarray, mode: str = "enhanced") -> np.ndarray:
     gray = cv2.cvtColor(image_rgb, cv2.COLOR_RGB2GRAY)
-    gray = cv2.bilateralFilter(gray, 7, 40, 40)
-    clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8))
-    gray = clahe.apply(gray)
-    processed = cv2.adaptiveThreshold(
-        gray,
-        255,
-        cv2.ADAPTIVE_THRESH_GAUSSIAN_C,
-        cv2.THRESH_BINARY,
-        31,
-        11,
-    )
+    if mode == "enhanced":
+        # Aggressive denoising and contrast enhancement
+        gray = cv2.fastNlMeansDenoising(gray, None, 30, 7, 21)
+        clahe = cv2.createCLAHE(clipLimit=3.0, tileGridSize=(8, 8))
+        gray = clahe.apply(gray)
+        # Sharpening
+        kernel = np.array([[0, -1, 0], [-1, 5,-1], [0, -1, 0]])
+        gray = cv2.filter2D(gray, -1, kernel)
+        processed = cv2.adaptiveThreshold(
+            gray,
+            255,
+            cv2.ADAPTIVE_THRESH_GAUSSIAN_C,
+            cv2.THRESH_BINARY,
+            21,
+            5,
+        )
+    else:
+        # Original pipeline
+        gray = cv2.bilateralFilter(gray, 7, 40, 40)
+        clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8))
+        gray = clahe.apply(gray)
+        processed = cv2.adaptiveThreshold(
+            gray,
+            255,
+            cv2.ADAPTIVE_THRESH_GAUSSIAN_C,
+            cv2.THRESH_BINARY,
+            31,
+            11,
+        )
     return processed
 
 
@@ -404,16 +507,16 @@ def _extract_marksheet_fields(dataframe: pd.DataFrame) -> Dict:
     return fields
 
 
-def _run_ocr(image_rgb: np.ndarray, reader: easyocr.Reader, paragraph: bool) -> pd.DataFrame:
+def _run_ocr(image_rgb: np.ndarray, reader: easyocr.Reader, paragraph: bool, preprocess_mode: str = "enhanced") -> pd.DataFrame:
     base_results = reader.readtext(image_rgb, detail=1, paragraph=paragraph)
-    adaptive_preprocessed = _preprocess_for_ocr(image_rgb)
+    enhanced_preprocessed = _preprocess_for_ocr(image_rgb, mode=preprocess_mode)
     otsu_preprocessed = _preprocess_for_ocr_otsu(image_rgb)
-    adaptive_results = reader.readtext(adaptive_preprocessed, detail=1, paragraph=paragraph)
+    enhanced_results = reader.readtext(enhanced_preprocessed, detail=1, paragraph=paragraph)
     otsu_results = reader.readtext(otsu_preprocessed, detail=1, paragraph=paragraph)
 
     all_rows = (
         _rows_from_easyocr_results(base_results, "base")
-        + _rows_from_easyocr_results(adaptive_results, "adaptive")
+        + _rows_from_easyocr_results(enhanced_results, preprocess_mode)
         + _rows_from_easyocr_results(otsu_results, "otsu")
     )
     merged_rows = _merge_ocr_rows(all_rows)
@@ -454,41 +557,51 @@ def _run_ocr_with_fallback(
     use_gpu: bool,
     paragraph: bool,
     primary_source: str,
+    preprocess_mode: str = "enhanced",
 ) -> Tuple[pd.DataFrame, str, List[Dict[str, Any]]]:
     attempts: List[Dict[str, Any]] = []
 
-    def attempt(reader: easyocr.Reader, paragraph_mode: bool, reader_source: str) -> pd.DataFrame:
-        dataframe = _run_ocr(image_rgb, reader, paragraph=paragraph_mode)
+
+    def attempt(reader: easyocr.Reader, paragraph_mode: bool, reader_source: str, mode: str = preprocess_mode) -> pd.DataFrame:
+        dataframe = _run_ocr(image_rgb, reader, paragraph=paragraph_mode, preprocess_mode=mode)
         attempts.append(
             {
                 "reader_source": reader_source,
                 "paragraph": paragraph_mode,
+                "preprocess_mode": mode,
                 "regions_detected": int(dataframe.shape[0]),
             }
         )
         return dataframe
 
-    dataframe = attempt(primary_reader, paragraph, primary_source)
+    dataframe = attempt(primary_reader, paragraph, primary_source, preprocess_mode)
     if not dataframe.empty:
         return dataframe, primary_source, attempts
 
     if paragraph:
-        dataframe = attempt(primary_reader, False, primary_source)
+        dataframe = attempt(primary_reader, False, primary_source, preprocess_mode)
         if not dataframe.empty:
             return dataframe, primary_source, attempts
 
     if primary_source != "runtime-easyocr":
         runtime_reader = _get_reader("en", use_gpu)
-        dataframe = attempt(runtime_reader, paragraph, "runtime-easyocr")
+        dataframe = attempt(runtime_reader, paragraph, "runtime-easyocr", preprocess_mode)
         if not dataframe.empty:
             return dataframe, "runtime-easyocr", attempts
         if paragraph:
-            dataframe = attempt(runtime_reader, False, "runtime-easyocr")
+            dataframe = attempt(runtime_reader, False, "runtime-easyocr", preprocess_mode)
             if not dataframe.empty:
                 return dataframe, "runtime-easyocr", attempts
 
     return dataframe, primary_source, attempts
 
+
+def _is_important_text(text: str) -> bool:
+    normalized = _normalize_text(text)
+    important_keywords = [
+        "CERTIFICATE", "COURSE", "NAME", "AWARDED", "COMPLETION", "SUBJECT", "TITLE", "ROLL", "ID", "GRADE", "RESULT", "PERCENTAGE", "ISSUED", "DATE", "WORKSHOP", "TRAINING", "INSTITUTE", "COLLEGE", "UNIVERSITY"
+    ]
+    return any(keyword in normalized for keyword in important_keywords)
 
 def _draw_overlay(image_rgb: np.ndarray, dataframe: pd.DataFrame, threshold: float) -> np.ndarray:
     annotated = image_rgb.copy()
@@ -498,9 +611,19 @@ def _draw_overlay(image_rgb: np.ndarray, dataframe: pd.DataFrame, threshold: flo
         width = int(row["width"])
         height = int(row["height"])
         confidence = float(row["ocr_confidence"])
-        color = (45, 180, 70) if confidence >= threshold else (235, 90, 60)
-
-        cv2.rectangle(annotated, (x, y), (x + width, y + height), color, 2)
+        text = str(row["ocr_text"])
+        is_important = _is_important_text(text)
+        # Green for important, else green if high confidence, else red
+        if is_important:
+            color = (0, 180, 0)  # vivid green
+            thickness = 4
+        elif confidence >= threshold:
+            color = (45, 180, 70)
+            thickness = 2
+        else:
+            color = (235, 90, 60)
+            thickness = 2
+        cv2.rectangle(annotated, (x, y), (x + width, y + height), color, thickness)
         cv2.putText(
             annotated,
             f"{confidence:.2f}",
@@ -511,6 +634,17 @@ def _draw_overlay(image_rgb: np.ndarray, dataframe: pd.DataFrame, threshold: flo
             1,
             cv2.LINE_AA,
         )
+        if is_important:
+            cv2.putText(
+                annotated,
+                "IMPORTANT",
+                (x, y + height + 18),
+                cv2.FONT_HERSHEY_SIMPLEX,
+                0.55,
+                color,
+                2,
+                cv2.LINE_AA,
+            )
     return annotated
 
 
@@ -644,7 +778,9 @@ def add_no_cache_headers(response):
     return response
 
 
+
 @app.route("/")
+@login_required
 def index():
     asset_version = dt.datetime.utcnow().strftime("%Y%m%d%H%M%S")
     return render_template(
@@ -712,6 +848,7 @@ def api_process():
     except Exception as exc:
         return jsonify({"error": f"Invalid image: {exc}"}), 400
 
+    preprocess_mode = request.form.get("preprocess_mode", "enhanced")
     try:
         reader, reader_source = _resolve_prediction_reader(use_gpu)
         dataframe, effective_reader_source, detection_attempts = _run_ocr_with_fallback(
@@ -720,6 +857,7 @@ def api_process():
             use_gpu=use_gpu,
             paragraph=paragraph,
             primary_source=reader_source,
+            preprocess_mode=preprocess_mode,
         )
     except Exception as exc:
         return jsonify({"error": f"OCR processing failed: {exc}"}), 500

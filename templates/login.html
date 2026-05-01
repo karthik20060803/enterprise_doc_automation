@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Enterprise Document Automation</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css', v=asset_version) }}">
+  <style>
+    body {
+      background: #f7fafc;
+      color: #222;
+    }
+    .login-container {
+      max-width: 400px;
+      margin: 80px auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+      padding: 32px 28px 24px 28px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .login-container h2 {
+      margin-bottom: 18px;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #2563eb;
+    }
+    .login-container label {
+      width: 100%;
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+    .login-container input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 18px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      font-size: 1rem;
+      background: #f1f5f9;
+      color: #222;
+    }
+    .login-container button {
+      width: 100%;
+      padding: 12px;
+      background: #2563eb;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      margin-bottom: 8px;
+    }
+    .login-container .error {
+      color: #ef4444;
+      margin-bottom: 10px;
+      font-size: 0.98rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Login</h2>
+    {% if error %}<div class="error">{{ error }}</div>{% endif %}
+    <form method="post" action="/login">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" required autofocus>
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required>
+      <button type="submit">Login</button>
+    </form>
+    <a href="/signup" style="margin-top:10px; color:#2563eb; font-weight:500; text-decoration:underline;">Don't have an account? Sign up</a>
+  </div>
+</body>
+</html>
