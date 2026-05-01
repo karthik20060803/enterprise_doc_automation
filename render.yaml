@@ -3,8 +3,8 @@ services:
     name: enterprise-doc-automation
     env: python
     plan: free
-    buildCommand: pip install --upgrade pip && pip install setuptools wheel && pip install gunicorn==22.0.0 && pip install -r requirements-render.txt
-    startCommand: python -m gunicorn --bind 0.0.0.0:$PORT web_frontend:app
+    buildCommand: pip install --upgrade pip && pip install setuptools wheel && pip install -r requirements-render.txt
+    startCommand: python -m waitress --port=$PORT web_frontend:app
     healthCheckPath: /api/health
     envVars:
       - key: PYTHON_VERSION
